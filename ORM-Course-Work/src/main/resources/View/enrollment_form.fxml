@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="588.0" prefWidth="1000.0" style="-fx-background-color: white; -fx-background-radius: 20;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.EnrollmentFormController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="77.0" prefHeight="499.0" prefWidth="983.0" style="-fx-background-radius: 20; -fx-background-color: #D1D8C5;" />
+      <Text fill="#040404" layoutX="64.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enrollments Manage">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Label layoutX="82.0" layoutY="100.0" text="Enrollment Id:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEnrollmentId" layoutX="81.0" layoutY="121.0" onAction="#txtSearchOnAction" prefHeight="30.0" prefWidth="276.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <Label layoutX="478.0" layoutY="100.0" text="Student Id:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="478.0" layoutY="162.0" text="Program Id:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="158.0" text="Student Name:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtStudentName" layoutX="81.0" layoutY="181.0" prefHeight="30.0" prefWidth="276.0">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="848.0" layoutY="126.0" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #FFC700;" text="Update">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0">
+               <image>
+                  <Image url="@../Assets/icons/icons8-update-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="848.0" layoutY="175.0" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #06D001;" text="Save">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0">
+               <image>
+                  <Image url="@../Assets/icons/icons8-save-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="848.0" layoutY="224.0" onAction="#btnClearOnAction" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #FF0000;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0">
+               <image>
+                  <Image url="@../Assets/icons/icons8-clear-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="848.0" layoutY="273.0" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #212884;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0">
+               <image>
+                  <Image url="@../Assets/icons/icons8-delete-30.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <TableView fx:id="tblEnrollment" layoutX="21.0" layoutY="372.0" prefHeight="186.0" prefWidth="966.0">
+         <columns>
+            <TableColumn fx:id="colEnrollmentId" prefWidth="90.66668701171875" text="Enrollment Id" />
+            <TableColumn fx:id="colStudentId" prefWidth="97.99993896484375" text="Student Id" />
+            <TableColumn fx:id="colStudentName" prefWidth="139.99993896484375" text="Student Name" />
+            <TableColumn fx:id="colProgramId" prefWidth="125.3333740234375" text="Program Id" />
+            <TableColumn fx:id="colProgram" prefWidth="151.20001220703125" text="Program" />
+            <TableColumn fx:id="colDate" prefWidth="94.39996337890625" text="Date" />
+            <TableColumn fx:id="colTotalFee" prefWidth="112.00006103515625" text="Remaining Fee" />
+            <TableColumn fx:id="colUpfrontFee" prefWidth="157.59991455078125" text="Upfront Fee" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="cmbStudentId" layoutX="477.0" layoutY="121.0" onAction="#handleStudentSelection" prefHeight="30.0" prefWidth="276.0" />
+      <Label layoutX="82.0" layoutY="216.0" text="Program:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtProgram" layoutX="81.0" layoutY="237.0" onAction="#txtSearchOnAction" prefHeight="30.0" prefWidth="276.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <Label layoutX="478.0" layoutY="216.0" text="Date:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="478.0" layoutY="278.0" text="Upfront Payment:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="274.0" text="Total Fee:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTotalFee" layoutX="81.0" layoutY="297.0" prefHeight="30.0" prefWidth="276.0">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtUpFrontPayment" layoutX="477.0" layoutY="300.0" prefHeight="30.0" prefWidth="276.0">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtDate" layoutX="477.0" layoutY="239.0" prefHeight="30.0" prefWidth="276.0">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="cmbProgramId" layoutX="477.0" layoutY="181.0" onAction="#handleCourseSelection" prefHeight="30.0" prefWidth="276.0" />
+   </children>
+</AnchorPane>

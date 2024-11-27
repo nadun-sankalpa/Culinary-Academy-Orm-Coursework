@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.AdminDashBoardFormController">
+   <children>
+      <AnchorPane layoutX="-13.0" layoutY="-10.0" prefHeight="720.0" prefWidth="243.0" style="-fx-background-color: #D1D8C5; -fx-background-radius: 20;">
+         <children>
+            <ImageView fitHeight="91.0" fitWidth="234.0" layoutX="13.0" layoutY="9.0">
+               <image>
+                  <Image url="@../Assets/good%20morning%20photo.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Load" layoutX="257.0" layoutY="102.0" prefHeight="588.0" prefWidth="1000.0" style="-fx-background-color: #D1D8C5; -fx-background-radius: 20;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#73ec8b" height="114.0" layoutX="51.0" layoutY="65.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="263.0" />
+            <Label layoutX="166.0" layoutY="81.0" text="Student Count">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblStudentCount" layoutX="209.0" layoutY="109.0" prefHeight="35.0" prefWidth="66.0" text="30" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="38.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="114.0" layoutX="342.0" layoutY="64.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="263.0" />
+            <Label layoutX="455.0" layoutY="78.0" text="Programs Count">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblProgramsCount" layoutX="507.0" layoutY="107.0" prefHeight="35.0" prefWidth="66.0" text="05" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Label>
+            <ImageView layoutX="364.0" layoutY="87.0">
+               <image>
+                  <Image url="@../Assets/icons8-courses-64.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tblProgram" layoutX="59.0" layoutY="284.0" prefHeight="255.0" prefWidth="538.0">
+               <columns>
+                  <TableColumn fx:id="colID" prefWidth="78.66668701171875" text="Program Id" />
+                  <TableColumn fx:id="colName" prefWidth="222.00003051757812" text="Program Name" />
+                  <TableColumn fx:id="colDuration" prefWidth="128.6666259765625" text="Duration" />
+                  <TableColumn fx:id="colFee" prefWidth="107.3333740234375" text="Fee" />
+               </columns>
+            </TableView>
+            <Label layoutX="62.0" layoutY="234.0" text="Available Programs ">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#73ec8b" height="114.0" layoutX="637.0" layoutY="61.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="263.0" />
+            <Label layoutX="767.0" layoutY="78.0" text="User Count">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="69.0" fitWidth="69.0" layoutX="77.0" layoutY="87.0">
+               <image>
+                  <Image url="@../Assets/IMG-20241127-WA0025-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="77.0" layoutX="672.0" layoutY="77.0">
+               <image>
+                  <Image url="@../Assets/IMG-20241127-WA0027-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="355.0" fitWidth="253.0" layoutX="648.0" layoutY="199.0">
+               <image>
+                  <Image url="@../Assets/user%20information.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblProgramsCount1" layoutX="800.0" layoutY="104.0" prefHeight="35.0" prefWidth="66.0" text="02" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="189.0" onAction="#btnDashboardOnAction" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: #73EC8B;" text="Dash Board">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../Assets/icons/icons8-dashboard-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="257.0" onAction="#btnStudentOnAction" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: #73EC8B;" text="Student">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../Assets/icons/icons8-student-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="329.0" onAction="#btnProgramOnAction" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: #73EC8B;" text="Program">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../Assets/icons/icons8-program-60.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="403.0" onAction="#btnPaymentOnAction" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: #73EC8B;" text="Payment">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../Assets/icons/icons8-payment-60.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="544.0" onAction="#btnUserOnAction" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: #73EC8B #73EC8B;" text="User">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../Assets/icons/icons8-user-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="614.0" onAction="#btnLogOutOnAction" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: #73EC8B;" text="Log Out">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../Assets/icons/icons8-log-out-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label fx:id="lblTime" layoutX="947.0" layoutY="18.0" prefHeight="31.0" prefWidth="314.0" textFill="#89377f">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="285.0" layoutY="48.0" text="Admin Dashboard">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="473.0" onAction="#btnEnrollmentOnAction" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: #73EC8B;" text="Enrollment">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../Assets/icons/icons8-payment-60.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ImageView fitHeight="46.0" fitWidth="47.0" layoutX="1175.0" layoutY="44.0">
+         <image>
+            <Image url="@../Assets/IMG-20241127-WA0028-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="85.0" fitWidth="241.0" layoutX="675.0" layoutY="15.0">
+         <image>
+            <Image url="@../Assets/IMG-20241127-WA0026-removebg-preview.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
