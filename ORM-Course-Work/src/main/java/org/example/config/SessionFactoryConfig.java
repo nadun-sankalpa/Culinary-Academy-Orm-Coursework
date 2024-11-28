@@ -23,16 +23,16 @@ public class SessionFactoryConfig {
                 .buildSessionFactory();
     }
     public static SessionFactoryConfig getInstance(){
-        //me method eken object ekk hdnn plwn.
-        if (null == factoryConfig){//methn null wenn plwn ek parai
-            return factoryConfig=new SessionFactoryConfig();//me wge class ek athule withrai hdnn plwn
+
+        if (null == factoryConfig){
+            return factoryConfig=new SessionFactoryConfig();
         }
-        //deveni prt call krnkot null nathi nis kalin hadena reference ekama return krnw
+
         return factoryConfig;
     }
-    public Session getSession(){//pulic krpu nis ona thenka access krnn plwm.hibernet session return krnn hdnne
+    public Session getSession(){
 
-        return sessionFactory.openSession();//sesstion type object ekk return krnw
+        return sessionFactory.openSession();
     }
 
 }
